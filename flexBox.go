@@ -197,7 +197,7 @@ func (r *FlexBox) getRowMatrix() (rowMatrix [][]int) {
 	for _, row := range r.rows {
 		var cellValues []int
 		for _, cell := range row.cells {
-			cellValues = append(cellValues, cell.ratioY)
+			cellValues = append(cellValues, cell.RatioY)
 		}
 		rowMatrix = append(rowMatrix, cellValues)
 	}

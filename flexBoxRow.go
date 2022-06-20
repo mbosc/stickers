@@ -174,10 +174,10 @@ func (r *FlexBoxRow) calculateCellsDimensions() (xMatrix, yMatrix []int) {
 func (r *FlexBoxRow) getCellHeightMatrix() (cellHeightMatrix []int, max int) {
 	max = 0
 	for _, cell := range r.cells {
-		if cell.ratioY > max {
-			max = cell.ratioY
+		if cell.RatioY > max {
+			max = cell.RatioY
 		}
-		cellHeightMatrix = append(cellHeightMatrix, cell.ratioY)
+		cellHeightMatrix = append(cellHeightMatrix, cell.RatioY)
 	}
 	return cellHeightMatrix, max
 }
@@ -185,7 +185,7 @@ func (r *FlexBoxRow) getCellHeightMatrix() (cellHeightMatrix []int, max int) {
 // getCellWidthMatrix return the matrix of the cell width in cells
 func (r *FlexBoxRow) getCellWidthMatrix() (cellWidthMatrix []int) {
 	for _, cell := range r.cells {
-		cellWidthMatrix = append(cellWidthMatrix, cell.ratioX)
+		cellWidthMatrix = append(cellWidthMatrix, cell.RatioX)
 	}
 	return cellWidthMatrix
 }

@@ -12,10 +12,10 @@ type FlexBoxCell struct {
 	// id of the cell, if not set it will default to the index in the row
 	id string
 
-	// ratioX width ratio of the cell
-	ratioX int
-	// ratioY height ratio of the cell
-	ratioY int
+	// RatioX width ratio of the cell
+	RatioX int
+	// RatioY height ratio of the cell
+	RatioY int
 	// minWidth minimal width of the cell
 	minWidth int
 	// TODO: implement minimal height
@@ -29,8 +29,8 @@ type FlexBoxCell struct {
 func NewFlexBoxCell(ratioX, ratioY int) *FlexBoxCell {
 	return &FlexBoxCell{
 		style:    lipgloss.NewStyle(),
-		ratioX:   ratioX,
-		ratioY:   ratioY,
+		RatioX:   ratioX,
+		RatioY:   ratioY,
 		minWidth: 0,
 		width:    0,
 		height:   0,
